@@ -11,8 +11,8 @@ print(data.count())
 print(data.shape)
 print(data.columns)
 
-# task 1 : making chart : (where we show the counts of good and bad outcomes for the cholesterol, gluc, alco,
-# active, and smoke variables for patients with cardio=1 and cardio=0 in different panels)
+# making chart : where we show the counts of good and bad outcomes for the cholesterol, gluc, alco,
+# active, and smoke variables for patients with cardio=1 and cardio=0 in different panels
 columns_needed = data[['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'cardio']]
 print(columns_needed)
 index_col = ['cholesterol', 'gluc', 'smoke', 'alco', 'active']
@@ -101,7 +101,7 @@ plt.xticks([r + bar_width for r in range(len(good_cardio_0))], index_col)
 plt.legend()
 plt.show()
 
-# task 2 : calculating BMI of an every patient and classing as an overweight '1' or not overweight '0':
+# calculating BMI of an every patient and classing as an overweight '1' or not overweight '0':
 bmi = pd.Series([], dtype='float64')
 print(len(data))
 for i in range(len(data)):
@@ -121,25 +121,23 @@ for i in range(len(data)):
 
 data.insert(14, 'Overweight', overweight)
 
-# task 3 : Normalizing the data by making 0 always good and 1 always bad-the value of cholesterol or glucose:
+# Normalizing the data by making 0 always good and 1 always bad-the value of cholesterol or glucose:
 
 data["cholesterol"] = np.where(data["cholesterol"] == 1, 0, 1)
 data["gluc"] = np.where(data["gluc"] == 1, 0, 1)
 
 print(data.head(10))
 
-# task 4 : Cleaning the data. Filtering out the following patient segments that represent incorrect data:
-# diastolic pressure is higher than systolic (Keep the correct data with (df['ap_lo'] <= df['ap_hi']))
-# height is less than the 2.5th percentile (Keep the correct data with (df['height'] >= df['height'].quantile(0.025)))
+# Cleaning the data. Filtering out the following patient segments that represent incorrect data:
+# diastolic pressure is higher than systolic
+# height is less than the 2.5th percentile
 # height is more than the 97.5th percentile
 # weight is less than the 2.5th percentile
 # weight is more than the 97.5th percentile
 data_heatmap = data.loc[(data["ap_lo"] <= data["ap_hi"]) & (data["height"] >= data["height"].quantile(0.025)) & (data["height"] <= data["height"].quantile(0.975)) & (data["weight"] >= data["weight"].quantile(0.025)) & (data["weight"] <= data["weight"].quantile(0.975))]
 corr = data_heatmap.corr()
-#upper = np.zeros_like(corr)
-#upper[np.triu_indices_from(upper)] = True
 
-# task 5 : Creating a correlation matrix with the filtered data. (heatmap):
+# Creating a correlation matrix with the filtered data. (heatmap):
 plt.subplots(figsize=(12, 9))
 sns.heatmap(corr, vmax=0.8, fmt='.1f', annot=True)
 
