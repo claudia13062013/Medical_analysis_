@@ -25,3 +25,18 @@ Python with its libraries like numpy, matpotlib and others helped in making char
 needed for this analysis and conclusions.
 
 ## Charts of analysis :
+Bar plot to see differences between patients with and without cardiovascular disease:
+- patients who have a cardiovascular disease have cholesterol and glucose levels above normal
+- patients who have a cardiovascular disease are a little less physically active
+   
+![Figure_1_bar_plot](https://github.com/claudia13062013/Medical_analysis_/assets/97663507/cde8705d-3ca0-4fea-858e-b9de2f98adfa)
+
+
+Heatmap correlation matrix to see positive or negative correlations between features:
+- features : 'weight', 'ap-lo ', 'cholesterol', 'gluc' and 'BMI', 'age ' have low but maybe significant correlation with 'cardio'. 
+-
+
+![Figure_2_heatmap](https://github.com/claudia13062013/Medical_analysis_/assets/97663507/738b2310-c52f-4cc2-9ab7-0037eb50366d)
+
+
+
