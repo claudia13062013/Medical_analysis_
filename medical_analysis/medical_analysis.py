@@ -123,10 +123,6 @@ print(ap_lo_cardio_corr)
 # - 'weight' and 'cardio' corr. and p-value:
 weight_cardio_corr = stat.pointbiserialr(data_heatmap['cardio'], data_heatmap['weight'])
 print(weight_cardio_corr)
-# - 'cholesterol' and 'gluc' corr. and p-value:
-plt.plot(data_heatmap['cholesterol'], data_heatmap['gluc'])
-plt.title('chol and gluc')
-plt.show()
 
 # CONCLUSIONS:
 # Patients who have cardiovascular disease also have above normal or well above normal level of cholesterol and glucose
