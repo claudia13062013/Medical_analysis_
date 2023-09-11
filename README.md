@@ -1,7 +1,7 @@
-# Medical_Analysis_Project_Assignment
-The dataset I used and assignments are from web site : "freeCodeCamp.org"
+# Medical_Analysis_Project
+The dataset and assignments come from web site : "freeCodeCamp.org"
 ## The dataset description :
-File "medical_examination.csv" contains medical examinations data. Rows in the dataset represents patients and 
+File "medical_examination.csv" contains a data with medical examinations. Rows in the dataset represents patients and 
 columns represents inforamtions from examined patients.
 
 | Feature | Variable Type | Variable      | Value Type |
@@ -20,5 +20,8 @@ columns represents inforamtions from examined patients.
 | Presence or absence of cardiovascular disease | Target Variable | cardio | binary |
 
 ## Code :
-Full code is located in file "medical_analysis.py" with comments for each step.
+A full code with comments is located in a file "medical_analysis.py".
+Python with its libraries like numpy, matpotlib and others helped in making charts and calcuations
+needed for this analysis and conclusions.
+
 ## Charts of analysis :
