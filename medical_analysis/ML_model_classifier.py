@@ -91,6 +91,12 @@ print(result.summary2())
 x = df.iloc[:, 1:13].values
 # model fitting:
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
+
+# feature normalization:
+scaler = StandardScaler()
+x_train = scaler.fit_transform(x_train)
+x_test = scaler.transform(x_test)
+
 logreg = LogisticRegression()
 logreg.fit(x_train, y_train)
 
