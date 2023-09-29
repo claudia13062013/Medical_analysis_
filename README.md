@@ -45,13 +45,14 @@ Using conclusions from an analysis, a classifier model  predicts if patient has 
   'BMI' column that uses columns 'weight' and 'height'
   #bmi[i] = df['weight'][i] / pow(df["height"][i] * 0.01, 2)
 - checking if classes are equal and no need of over/under sampling
-  
+  ![Figure_3_classes](https://github.com/claudia13062013/Medical_analysis_/assets/97663507/56b1cb32-96bb-47ec-8f28-bff429e0e017)
+
 - Using Logistic regression and a feature selection with RFE
   
   Result:
   
   -seeing columns that can be dropped and overall infos about features
   
-- Result of training and testing of a model
+- Result of training and testing of a model:
   
 Accuracy of Logistic Regression test: 0.72
