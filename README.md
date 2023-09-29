@@ -34,9 +34,24 @@ Bar plot to see differences between patients with and without cardiovascular dis
 
 Heatmap correlation matrix to see positive or negative correlations between features:
 - features : 'weight', 'ap-lo ', 'cholesterol', 'gluc' and 'BMI', 'age ' have low but maybe significant correlation with 'cardio'. 
--
+
 
 ![Figure_2_heatmap](https://github.com/claudia13062013/Medical_analysis_/assets/97663507/738b2310-c52f-4cc2-9ab7-0037eb50366d)
 
-
-
+## Machine Learning Model:
+Using conclusions from an analysis, a classifier model  predicts if patient has or hasn't a cardiovascular disease with 72% accuracy:
+  Full code in file 'ML_model_classifier.py'
+- doing another column that should help with a model training and then scaling features
+  'BMI' column that uses columns 'weight' and 'height'
+  #bmi[i] = df['weight'][i] / pow(df["height"][i] * 0.01, 2)
+- checking if classes are equal and no need of over/under sampling
+  
+- Using Logistic regression and a feature selection with RFE
+  
+  Result:
+  
+  -seeing columns that can be dropped and overall infos about features
+  
+- Result of training and testing of a model
+  
+Accuracy of Logistic Regression test: 0.72
